@@ -1,0 +1,38 @@
+/* other resourses */
+/* Font URL: https://fonts.googleapis.com/css2?family=Poppins%3Awght%40400%3B500%3B600&display=swap
+Icons (Font Awesome) complete link element : <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==">
+Background image URL: https://bytegrad.com/course-assets/youtube/bg.png
+Photo 1 URL: https://i.ibb.co/s3H6bk3/singer.png
+Photo 2 URL: https://i.ibb.co/T1KkBgR/guitar.png
+Credential 1 URL: https://i.ibb.co/Jv8Hcnv/Artist-Papers.png
+Credential 2 URL: https://i.ibb.co/dcSmf5Y/events-seas.png
+Credential 3 URL: https://i.ibb.co/yVY4vFQ/Creter-s.png */
+
+/* BASE STYLES */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px (usually) */
+  font-size: 62.6%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+

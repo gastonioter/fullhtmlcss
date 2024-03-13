@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>App Layout</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <h1 class="sidebar__title">Ivcar Alarmas</h1>
+
+      <nav class="sidebar__nav">
+        <a class="sidebar__link" href="/index.html"
+          >Home <span>&rArr;</span>
+        </a>
+        <a class="sidebar__link" href="/users.html"
+          >Users <span>&rArr;</span></a
+        >
+        <a class="sidebar__link" href="/devices.html"
+          >Devices <span>&rArr;</span></a
+        >
+        <a class="sidebar__link" href="">Alarms <span>&rArr;</span></a>
+        <a class="sidebar__link" href="">Invoices <span>&rArr;</span></a>
+      </nav>
+
+      <div class="sidebar__username">
+        <p>My Username</p>
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="header">
+        <div class="header__toggle">
+          <div class="header__line"></div>
+          <div class="header__line"></div>
+          <div class="header__line"></div>
+        </div>
+        <div class="header__menus">
+          <div class="header__menu">User</div>
+          <div class="header__menu">Emails</div>
+          <div class="header__menu">Logout</div>
+        </div>
+      </header>
+      <main class="app">
+        <div class="table2" role="table">
+          <section class="table__header">
+            <div class="table__hr">#ID</div>
+            <div class="table__hr">ALIAS</div>
+            <div class="table__hr">CHIPID</div>
+            <div class="table__hr">STATUS</div>
+          </section>
+          <section class="table__body">
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+            <div class="table__row">
+              <div class="table__cell">2</div>
+              <div class="table__cell">casa</div>
+              <div class="table__cell">12323</div>
+              <div class="table__cell">Active</div>
+            </div>
+
+            <input type="text" class="input" />
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>© 2024, made with by Gaston Castro developer.</p>
+        <div class="socials">
+          <p><span>INSTA</span></p>
+          <p><span>FB</span></p>
+          <p><span>X</span></p>
+          <p><span>LINKEDIN</span></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("click", (e) => {
+    console.log("click");
+  });
+</script>
