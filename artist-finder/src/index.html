@@ -4,12 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-7BPcbnGpRo3j3YFPn8bIJ/bLB1BuQyXnqLR2AB6yP5DgvkFAdH2hzO8pWzhT7YfOxWjqZfXuXcF9OZcSxd0UUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
       rel="shortcut icon"
       href="https://i.ibb.co/mNn2gzM/artistfinder-favicon.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+
     <link rel="stylesheet" href="styles.css" />
     <title>Artist Finder</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <header class="header container">
+        <nav class="nav">
+          <a href="" class="nav__item">LOGIN</a>
+          <a href="" class="nav__item nav__item--btn">JOIN AS ARTIST</a>
+        </nav>
+      </header>
+    </div>
+
+    <div>
+      <main class="main container">
+        <section class="intro">
+          <section class="search">
+            <h1 class="search__heading">
+              Book the <u><i>ideal artist</i></u> for your event
+            </h1>
+            <form action="" class="form">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Type (e.g Ed Sheeran)"
+              />
+              <input type="text" class="form__input" placeholder="Zip Code" />
+              <button class="form__button">search</button>
+            </form>
+          </section>
+
+          <section class="photos">
+            <div class="photos__photoWp photos__photoWp--1">
+              <img src="https://i.ibb.co/s3H6bk3/singer.png" alt="" class="" />
+            </div>
+            <div class="photos__photoWp photos__photoWp--2">
+              <img
+                src="https://i.ibb.co/T1KkBgR/guitar.png"
+                alt=""
+                class="photo__img"
+              />
+            </div>
+          </section>
+        </section>
+        <section class="section brands">
+          <p class="brands__text">Seen on</p>
+          <div class="brands__brand">
+            <img src="https://i.ibb.co/yVY4vFQ/Creter-s.png " alt="brand" />
+          </div>
+          <div class="brands__brand">
+            <img src="https://i.ibb.co/dcSmf5Y/events-seas.png" alt="brand" />
+          </div>
+          <div class="brands__brand">
+            <img src="https://i.ibb.co/Jv8Hcnv/Artist-Papers.png" alt="brand" />
+          </div>
+        </section>
+
+        <section class="section how">
+          <h2 class="how__heading">How it Works</h2>
+          <ol class="how__steps">
+            <li class="how__step">
+              <h3 class="how__title">Find your artist</h3>
+              <p class="how__text">
+                Use our search engine to find any artist easily
+              </p>
+            </li>
+            <li class="how__step">
+              <h3 class="how__title">Book and pay</h3>
+              <p class="how__text">Schedule your artist and pay safely here</p>
+            </li>
+            <li class="how__step">
+              <h3 class="how__title">Enjoy the show!</h3>
+              <p class="how__text">Sit back and relax knowing it's all done</p>
+            </li>
+          </ol>
+          <div class="how__linkWp">
+            <a class="how__link" href="">More info</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="footerWp">
+      <footer class="footer container">
+        <small class="footer__copy">© 2025. Copyright by ArtistFinder.</small>
+        <div class="footer__legals">
+          <small> <a href="" class="footer__legal">Terms & conditions</a> </small
+          ><small><a href="" class="footer__legal">Privacy policy</a></small>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
