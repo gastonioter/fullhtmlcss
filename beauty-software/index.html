@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Dropdown (+Submenu)</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content container">
+        <a href="" class="logo"
+          ><span>Ivcar Alarmas</span
+          ><img src="https://ivcaralarmas.com/public/img/logo.png" alt=""
+        /></a>
+
+        <nav class="nav">
+          <ul class="nav__items">
+
+            <li class="nav__item">
+              <a href="" class="nav__link">Projects</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="nav__link">Company</a>
+            </li>
+
+            <li class="nav__item dropdown">
+              <a href="" class="nav__link"
+                >Solutions &#x25BE;</i>
+              </a>
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><a class="dropdown__link" href="">Solution #1</a></li>
+                <li class="dropdown__item" ><a class="dropdown__link" href="">Solution #2</a></li>
+                <li class="dropdown__item"><a class="dropdown__link" href="">Solution #3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__content container">
+        <div class="main__text">
+          <h1 class="main__title">Beauty Software</h1>
+          <h3 class="main__description">We turn your ideas into <span>real-world</span> projects</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content container">
+        <small class="footer__copy">&copy; 2024 All rigths reserved</small>
+        <ul class="socials">
+          <li class="socials__social">
+            <a class="socials__link" href=""><small>FB</small></a>
+            <a class="socials__link" href=""><small>INSTA</small></a>
+            <a class="socials__link" href=""><small>X</small></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
