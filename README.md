@@ -1,4 +1,10 @@
-# HTML & CSS projects
+# Pure Web Development
 
-The folders inside this repo contains a website for a specefic use-case.
-I didn't design the website but I did the development. I get inspired of others designs.
+## HTML, CSS & JS from scratch
+
+The folders inside this repo contains a landing page or website. I use this repo
+to explore my ideas and prove my web developement and design skills in vanilla HTML, CSS and JS.
+
+Most of the desing of the projects are created by myself, and in other cases a use created desings to customize them
+
+As the project grows i use a build proccess to minification, transpiling, etc
