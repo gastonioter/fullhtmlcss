@@ -70,9 +70,6 @@ section {
   position: relative;
 }
 
-.section__content {
-  margin-top: 10rem;
-}
 .section__title::after {
   content: "";
   display: block;
@@ -84,6 +81,9 @@ section {
   left: 50%;
   transform: translate(-50%);
   margin-top: 2rem;
+}
+.section__content {
+  margin-top: 10rem;
 }
 .container {
   width: 90%;
@@ -399,14 +399,26 @@ main {
   color: rgb(162, 184, 205);
   font-size: 2rem;
   text-align: center;
+  position: relative;
   margin-bottom: 2rem;
+}
+.project__title::after{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #3c3cf6;
+  width: 40px;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
 }
 .project__desc {
   padding: 0 2rem;
   text-align: left;
   line-height: 1.5;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
 footer {
