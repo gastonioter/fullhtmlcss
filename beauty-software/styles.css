@@ -392,6 +392,8 @@ main {
   display: flex;
 }
 .project__text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 10rem;
   flex: 2;
 }
 .project__imgWp {
@@ -427,7 +429,6 @@ main {
   padding: 0 2rem;
   text-align: left;
   line-height: 1.5;
-  max-width: 600px;
   margin: 4rem auto;
 }
 
@@ -456,7 +457,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.contact__subtitle{
+.contact__subtitle {
   margin-bottom: 2rem;
 }
 .input {
@@ -478,4 +479,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.socials{
+  display: flex;
+  gap: 1rem;
 }
