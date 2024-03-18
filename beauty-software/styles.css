@@ -120,7 +120,13 @@ form {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.2);
+  transition: all .3s ease-in-out;
+  background-color: rgba(10, 10, 10, 0);
+}
+
+.header--scrolled {
+  background-color: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(10px);
   box-shadow: 0 10px 45px rgba(12, 0, 99, 0.5);
 }
 
@@ -502,12 +508,11 @@ footer {
     display: block;
     padding-top: 1.5rem;
   }
-  
+
   .project:hover .project__img {
     transform: scale(1.2);
   }
   .project__img {
-   
     filter: brightness(0.3);
   }
   .project__text {
@@ -517,7 +522,7 @@ footer {
     justify-content: space-between;
   }
 
-  .project__desc{
+  .project__desc {
     margin: 10rem 0 2rem 0;
   }
   .project__imgWp {
