@@ -47,25 +47,53 @@ h2 {
   text-align: center;
   margin-top: 2rem;
   font-weight: 600;
-}
-h2,
-h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-h3,
+
 p,
 h4 {
   color: #aab8d1;
   text-align: center;
 }
 section {
+  margin-block: 3rem;
   padding-block: 4rem;
+}
+
+.section__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aab8d1;
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+}
+
+.section__content {
+  margin-top: 10rem;
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 2rem;
 }
 .container {
   width: 90%;
   max-width: 110rem;
   margin: 0 auto;
+}
+
+.company,
+.contact,
+.projects {
+  background-color: rgba(10, 10, 10, 0.2);
 }
 
 /* HEADER */
@@ -263,15 +291,11 @@ main {
 }
 
 /* THE COMPANY */
-.company {
-  background-color: rgba(10, 10, 10, 0.2);
-}
 .company__flex {
   display: flex;
   align-items: start;
   justify-content: space-between;
   text-align: left;
-  margin-top: 4rem;
   flex-wrap: wrap;
   column-gap: 4rem;
   row-gap: 3rem;
@@ -300,7 +324,6 @@ main {
 }
 
 /* PROJECTS */
-
 
 footer {
   color: rgba(255, 255, 255, 0.3);
