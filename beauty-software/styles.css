@@ -461,7 +461,7 @@ main {
 .contact__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18rem;
+  column-gap: 18rem;
   align-items: center;
 }
 
@@ -492,6 +492,9 @@ main {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
+  width: 35%;
+  align-self: flex-end;
+  margin-top: 1rem;
 }
 .input[type="submit"]:hover {
   background-color: rgb(37, 37, 163);
