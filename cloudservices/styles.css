@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
 
-/* VARIABLES */
 :root {
   /*========== Colors ==========*/
   --color-main-lighter: #dee9ff;
@@ -61,7 +60,7 @@ body {
     var(--color--accent-darker)
   );
 
-  color: var(--color-gray-900);
+  color: var(--color-main-darker);
 }
 
 ul {
@@ -70,6 +69,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* UTILITIES */
@@ -110,15 +110,75 @@ h2 {
 .section {
   padding-block: 5rem 1rem;
 }
-.bg {
-  position: absolute;
+
+/* ******* */
+/* HEADER */
+/* ******* */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
-.bg:nth-child(1) {
-  bottom: 0;
-  right: 0;
+/* BRAND */
+.header__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__brand {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
-.bg:nth-child(2) {
-  top: 0;
-  left: 0;
+.header__brand span {
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.header__brand p {
+  margin-top: -0.8rem;
+}
+
+/* MAIN NAVIGATION */
+
+.nav {
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__item {
+  padding-block: 3.5rem;
+  padding-inline: 1.5rem;
+}
+.nav__link {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+/* SECOND NAVIGATION */
+
+.header__sec-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header__btn-link {
+  padding: 1.4rem;
+  font-weight: 600;
+  font-size: var(--font-sm);
+}
+.link--btn {
+  color: var(--color-withe);
+  background-color: var(--color-main);
+}
+.link--btn--outline {
+  border: 1px solid var(--color-main);
+  color: var(--color-main);
 }
