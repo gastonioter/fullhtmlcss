@@ -132,6 +132,7 @@ h2 {
   top: 0;
   width: 100%;
   left: 0;
+  background-color: #fff;
 }
 /* BRAND */
 .header__content {
@@ -211,6 +212,7 @@ h2 {
 }
 
 .hero__title {
+  font-family: var(--font-headings);
   font-size: var(--font-xl);
   font-weight: var(--font-black);
 }
@@ -236,8 +238,31 @@ h2 {
 /*  FEATURES */
 /* ******** */
 
-.features{
-background-color: var(--color-main-darker);
+.features {
+  background-color: var(--color-main-darker);
+  padding-block: 4rem;
+}
+.features__content {
+  display: flex;
+  column-gap: 4rem;
 }
 
-.features__content{}
+.card {
+  flex: 1;
+  background-color: var(--color-withe);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card__title {
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+  margin-top: -0.5rem;
+  font-weight: 900;
+}
+
+.card__img {
+  width: 45px;
+  height: 45px;
+}
