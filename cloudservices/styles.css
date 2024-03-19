@@ -388,7 +388,7 @@ h2 {
 .footer__sections {
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .column {
