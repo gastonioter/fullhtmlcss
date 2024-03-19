@@ -93,11 +93,11 @@ img {
   font-size: var(--font-sm);
   color: var(--color-withe);
   background-color: var(--color-main);
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
-.button:hover{
+.button:hover {
   background-color: #456fed;
 }
 
@@ -363,4 +363,57 @@ h2 {
 .ready__action {
   width: max-content;
   padding-inline: 5rem;
+}
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+.footer {
+  background-color: var(--color-main-darker);
+  color: #fff;
+  padding-block: 5rem 1rem;
+  font-size: 1.3rem;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header__brand--footer {
+}
+
+.footer__sections {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.column {
+}
+.column__title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.column__item {
+  margin-top: 1rem;
+}
+
+.footer__legals {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__legal {
+  padding: 0rem 2rem;
+  border-right: 1px solid #f5f5f5;
+}
+
+.footer__link {
+  text-align: center;
 }
