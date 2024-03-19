@@ -25,12 +25,11 @@ function setLinkActive({ id }) {
     (link) => link.attributes.href.value.split("#").at(1) == id
   );
 
-
   if (!activeLink) return;
   activeLink.classList.add("active");
 }
 
-function obsCallback(entries, observer) {
+function handleActiveLink(entries, observer) {
   entries.forEach((entry) => {
     //console.log(entry);
     if (entry.isIntersecting) {
@@ -40,9 +39,9 @@ function obsCallback(entries, observer) {
   });
 }
 
-const io = new IntersectionObserver(obsCallback, obsOptions);
+const sectionsObserver = new IntersectionObserver(handleActiveLink, obsOptions);
 
-sections.forEach((s) => io.observe(s));
+sections.forEach((section) => sectionsObserver.observe(section));
 
 // ADD EVENTS LISTENERS
 mainBtn.addEventListener("click", moveToContact);
