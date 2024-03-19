@@ -266,3 +266,51 @@ h2 {
   width: 45px;
   height: 45px;
 }
+
+/* SOLUTIONS */
+
+.solutions {
+  margin-top: 10rem;
+  background-image: url("https://www.kamatera.com/wp-content/uploads/e-BG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 3rem;
+}
+
+.solutions__heading {
+  color: #fff;
+  font-size: var(--font-xl);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.solutions__solutions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 300px;
+  background-color: #fff;
+  padding: 2rem 3rem;
+}
+.solution__imgWp {
+}
+.solution__img {
+}
+
+.solution__heading {
+  font-size: 2.2rem;
+}
+
+.solution__text {
+  margin-bottom: 2rem;
+}
+
+.solution__link {
+  color: var(--color-main);
+}
