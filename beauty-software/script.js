@@ -1,9 +1,18 @@
 const headerEl = document.querySelector(".header");
 const navListEl = document.querySelector(".nav__items");
 const sections = document.querySelectorAll("section");
+const mainBtn = document.querySelector(".main__button");
+
+const contactSection = document.querySelector(".contact");
+const { top: topPositionSection } = contactSection.getBoundingClientRect();
+
+mainBtn.addEventListener("click", moveToContact);
 document.addEventListener("scroll", handleScroll);
 navListEl.addEventListener("click", handleNavigationClick);
 
+function moveToContact() {
+  scrollTo(scrollX, scrollY + topPositionSection);
+}
 function handleNavigationClick(e) {
   e.preventDefault();
   const link = e.target;
