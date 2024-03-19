@@ -86,11 +86,19 @@ img {
 }
 
 .button {
+  border: none;
+  border-radius: 2px;
   padding: 1.4rem;
   font-weight: 600;
   font-size: var(--font-sm);
   color: var(--color-withe);
   background-color: var(--color-main);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #456fed;
 }
 
 /* BASE STYLES */
@@ -240,7 +248,7 @@ h2 {
 
 .features {
   background-color: var(--color-main-darker);
-  padding-block: 4rem;
+  padding-block: 10rem;
 }
 .features__content {
   display: flex;
@@ -270,11 +278,10 @@ h2 {
 /* SOLUTIONS */
 
 .solutions {
-  margin-top: 10rem;
   background-image: url("https://www.kamatera.com/wp-content/uploads/e-BG.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-block: 3rem;
+  padding-block: 10rem;
 }
 
 .solutions__heading {
@@ -313,4 +320,47 @@ h2 {
 
 .solution__link {
   color: var(--color-main);
+}
+
+/* ****** */
+/* READY */
+/* ****** */
+
+.ready {
+  padding-block: 10rem;
+  background: linear-gradient(
+    45deg,
+    #e7edff 0,
+    #e7edff 20%,
+    #dde4fd 20%,
+    #dde4fd 80%,
+    #e7edff 80%,
+    #e7edff 100%
+  );
+}
+
+.ready__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ready__heading {
+  color: var(--color-main-darker);
+  font-family: var(--font-headings);
+  font-size: var(--font-xl);
+  text-align: center;
+  font-weight: 900;
+}
+
+.ready__text {
+  text-align: center;
+  font-size: var(--font-lg);
+  font-weight: 700;
+}
+
+.ready__action {
+  width: max-content;
+  padding-inline: 5rem;
 }
