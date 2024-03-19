@@ -11,9 +11,14 @@ const { top: topPositionSection } = contactSection.getBoundingClientRect();
 
 // INTERSECTION OBSERVER SETTINGS
 
-const obsOptions = {
+const sectionsObsOptions = {
   root: null, // viewport
   threshold: 0.4,
+};
+
+const mainBtnObsOptions = {
+  root: null,
+  threshold: 0,
 };
 
 function setLinkActive({ id }) {
@@ -29,17 +34,25 @@ function setLinkActive({ id }) {
   activeLink.classList.add("active");
 }
 
+function showSection(section) {
+  section.classList.remove("section--hidden");
+}
+
 function handleActiveLink(entries, observer) {
   entries.forEach((entry) => {
     //console.log(entry);
     if (entry.isIntersecting) {
       const { target } = entry;
       setLinkActive(target);
+      showSection(target);
     }
   });
 }
 
-const sectionsObserver = new IntersectionObserver(handleActiveLink, obsOptions);
+const sectionsObserver = new IntersectionObserver(
+  handleActiveLink,
+  sectionsObsOptions
+);
 
 sections.forEach((section) => sectionsObserver.observe(section));
 
@@ -67,6 +80,6 @@ function handleNavigationClick(e) {
 }
 
 function handleScroll() {
-  if (scrollY > 72) headerEl.classList.add("header--scrolled");
-  else headerEl.classList.remove("header--scrolled");
+  if (scrollY > 72) headerEl.classList.add("scrolled");
+  else headerEl.classList.remove("scrolled");
 }
