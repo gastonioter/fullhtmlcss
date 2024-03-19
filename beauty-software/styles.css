@@ -305,7 +305,7 @@ main {
   font-weight: 500;
   margin-top: auto;
   padding: 1.5rem 5rem;
-  border-radius: 20rem;
+  border-radius: 8px;
   background-color: #3c3cf6;
   cursor: pointer;
   transition: all 0.2s;
@@ -482,6 +482,21 @@ main {
   background-color: #c5cfdf;
 }
 
+.input[type="submit"] {
+  padding: 1rem;
+  background-color: #3c3cf6;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.input[type="submit"]:hover {
+  background-color: rgb(37, 37, 163);
+}
+
 /* FOOTER */
 footer {
   color: rgba(255, 255, 255, 0.3);
@@ -624,7 +639,7 @@ footer {
   .nav {
     display: none;
   }
-  .header__content{
+  .header__content {
     flex-direction: row;
   }
 
