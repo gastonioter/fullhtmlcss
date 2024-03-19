@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+/* VARIABLES */
+:root {
+  /*========== Colors ==========*/
+
+  --color-main-50: rgb(239 246 255);
+  --color-main-100: rgb(219 234 254);
+  --color-main-200: rgb(191 219 254);
+  --color-main-300: rgb(147 197 253);
+  --color-main-400: rgb(96 165 250);
+  --color-main-500: rgb(59 130 246);
+  --color-main-600: rgb(37 99 235);
+  --color-main-700: rgb(29 78 216);
+  --color-main-800: rgb(30 64 175);
+  --color-main-900: rgb(30 58 138);
+  --color-main-950: rgb(23 37 84);
+
+  --color-gray-50: rgb(249 250 251);
+  --color-gray-100: rgb(243 244 246);
+  --color-gray-200: rgb(229 231 235);
+  --color-gray-300: rgb(209 213 219);
+  --color-gray-400: rgb(156 163 175);
+  --color-gray-500: rgb(107 114 128);
+  --color-gray-600: rgb(75 85 99);
+  --color-gray-700: rgb(55 65 81);
+  --color-gray-800: rgb(31 41 55);
+  --color-gray-900: rgb(17 24 39);
+  --color-gray-950: rgb(3 7 18);
+
+  /*========== Font and typography ==========*/
+  --font-body: "Almarai";
+  --font-headings: "Inria Sans";
+
+  /*========== Font size ==========*/
+
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-base: 1.6rem;
+  --font-lg: 1.8rem;
+  --font-xl: 2rem;
+  --font-2xl: 2.4rem;
+  --font-3xl: 3rem;
+  --font-4xl: 3.6rem;
+  --font-5xl: 4.8rem;
+
+  /*========== Font weight ==========*/
+
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* Border Raduius */
+
+  --rounded-none: 0px;
+  --rounded-sm: 0.2; /* 2px */
+  --rounded-base: 0.4rem; /* 4px */
+  --rounded-md: 0.6rem; /* 6px */
+  --rounded-lg: 0.8rem; /* 8px */
+  --rounded-xl: 1.2rem; /* 12px */
+  --rounded-2xl: 1.6rem; /* 16px */
+  --rounded-3xl: 2.4rem; /* 24px */
+  --rounded-full: 9999px;
+}
+
+/* RESET */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100dvh;
+  background: linear-gradient(
+    to bottom,
+    var(--color-main-100),
+    var(--color-main-300)
+  );
+
+  color: var(--color-gray-900);
+}
+
+/* UTILITIES */
+
+.container {
+  max-width: 115rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* BASE STYLES */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-headings);
+}
+h1 {
+  font-size: var(--font-5xl);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: var(--font-4xl);
+  letter-spacing: -1px;
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--font-4xl);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+section {
+  margin-block: 9.6rem;
+}
