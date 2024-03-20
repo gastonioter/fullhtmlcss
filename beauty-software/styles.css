@@ -474,7 +474,12 @@ main {
 
 input:user-invalid,
 textarea:user-invalid {
-  border: 1px solid red;
+  border: 2px solid rgba(222, 43, 43, 0.8);
+}
+
+input:user-valid,
+textarea:user-valid {
+  border: 2px solid rgba(8, 138, 8, 0.8);
 }
 
 input:user-invalid + .error-msg {
