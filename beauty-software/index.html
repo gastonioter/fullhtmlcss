@@ -163,25 +163,35 @@
             <h3 class="section__title">Contact us</h3>
             <p class="contact__subtitle">What about your next porject? We can help you</p>
             
-            <label for="name">Name</label>
-            <input class="input" type="text" name="name" id="name">
+            <div class="form__filed">
+              <label for="name">Full Name</label>
+              <input placeholder="Your Name" class="input" type="text" name="name" id="name" minlength="3" maxlength="255" required>
+              <p class="error-msg">Please, give as a valid name</p>
+            </div>
 
-            <label for="email">Email</label>
-            <input class="input" type="email" name="email" id="email">
+            <div class="form__filed">
+              <label for="email">Email</label>
+              <input placeholder="e.g name@example.com" class="input" type="email" name="email" id="email" required>
+              <p class="error-msg">Please, give as a valid email, we may need it to contact you</p>
+            </div>
 
-            <label for="phone">Phone Number</label>
-            <input class="input" type="tel" name="phone" id="phone">
+            <div class="form__filed">
+              <label  for="phone">Phone Number</label>
+              <input placeholder="e.g 3385448580" class="input" type="tel" name="phone" id="phone">
+            </div>
 
-            <label for="message">Message</label>
-            <textarea class="input textarea" name="message" id="message" cols="30" rows="10"></textarea>
-
+            <div class="form__filed">
+              <label for="message">Message</label>
+              <textarea placeholder="Type your message here ..." class="input textarea" name="message" id="message" cols="30" rows="10" minlength="2" maxlength="255" required></textarea>
+              <p class="error-msg"> Sorry, the message is not valid</p>
+            </div>
             <button class="input" type="submit">Send </button>
           </form>
           
         </div>
       </section>
     </main>
-
+    
     <footer class="footer">
       <div class="footer__content container">
         <small class="footer__copy">&copy; 2024 All rigths reserved</small>
