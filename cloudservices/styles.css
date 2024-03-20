@@ -388,7 +388,7 @@ h2 {
 .footer__sections {
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .column {
@@ -405,7 +405,7 @@ h2 {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -416,4 +416,8 @@ h2 {
 
 .footer__link {
   text-align: center;
+}
+
+.footer__legal:last-child {
+  border: none;
 }
