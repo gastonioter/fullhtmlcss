@@ -16,11 +16,6 @@ const sectionsObsOptions = {
   threshold: 0.4,
 };
 
-const mainBtnObsOptions = {
-  root: null,
-  threshold: 0,
-};
-
 function setLinkActive({ id }) {
   //id: section id attribute
 
