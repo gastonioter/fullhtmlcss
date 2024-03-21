@@ -485,12 +485,18 @@ textarea:user-valid {
 input:user-invalid + .error-msg {
   display: block;
 }
+.input + label {
+  color: red;
+}
 
 input::placeholder,
 textarea::placeholder {
   font-variant: small-caps;
 }
-
+.label--required::after {
+  content: "*";
+  display: inline-block;
+}
 .error-msg {
   display: none;
   /* opacity: 1; */
@@ -501,6 +507,7 @@ textarea::placeholder {
   font-weight: 600;
   color: rgba(222, 43, 43, 0.8);
 }
+
 .contact__subtitle {
   margin-bottom: 2rem;
 }

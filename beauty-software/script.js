@@ -83,3 +83,10 @@ function handleScroll() {
   if (scrollY > 72) headerEl.classList.add("scrolled");
   else headerEl.classList.remove("scrolled");
 }
+
+// REQUIRED INPUTS
+
+const requireds = document.querySelectorAll("[required]");
+requireds.forEach((input) => {
+  input.previousElementSibling.classList.add("label--required");
+});
