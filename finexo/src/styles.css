@@ -75,6 +75,30 @@ img {
 
 .nav__item {
   padding: 2.5rem;
+  position: relative;
+}
+
+.nav__item:hover {
+  color: #00c8ff;
+}
+
+.nav__item::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.nav__item:hover::after {
+  height: 2px;
+  opacity: 1;
+
+  display: block;
+  background-color: #00c8ff;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
 }
 
 .nav__link {
@@ -207,6 +231,130 @@ img {
   color: #06004b;
   font-weight: 600;
   margin-top: 1rem;
+}
+
+.services__all {
+  color: #fff;
+}
+
+/* ABOUT US */
+
+.about {
+  background-color: #06004b;
+  color: #fff;
+}
+.about__content {
+  text-align: center;
+}
+
+.about__heading {
+  font-size: 3rem;
+}
+.about__heading span {
+  color: #00c8ff;
+}
+
+.about__flex {
+  display: flex;
+  /* align-items: stretch; */
+  margin-top: 5rem;
+}
+
+.about__text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.about__text h3 {
+  /* margin-bottom: auto; */
+  font-size: 3rem;
+}
+
+.about__text p + p {
+  margin-top: 2rem;
+}
+.about__imgWp {
+  flex: 1;
+}
+
+/* WHY */
+
+.why h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h2 span {
+  color: #00c8ff;
+}
+/* TABBED COMPONENT */
+
+.tabbed {
+}
+
+.tabbed__tabs {
+  display: flex;
+  background-color: #f8f8f9;
+  box-shadow: 0 10px 5px #ececf9;
+  margin-bottom: 3rem;
+  gap: 3rem;
+  border-radius: 500rem;
+}
+.tabbed__tab {
+  padding: 2rem;
+  cursor: pointer;
+}
+.tabbed__tab.active {
+  background-color: #06004b;
+  color: #fff;
+  border-radius: 500rem;
+  font-weight: 600;
+}
+
+.tabbed__content[aria-hidden="true"] {
+  height: 0;
+  overflow: hidden;
+}
+.tabbed img {
+  width: 55px;
+  height: auto;
+}
+
+.tabbed__imgWp {
+  margin-bottom: 20px;
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: 100%;
+  border: 5px solid #00204a;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.tabbed__content[aria-hidden="false"] {
+  height: initial;
+}
+.tabbed__content {
+  transition: all 0.5s;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.tabbed__content p {
+  font-size: 2rem;
+  line-height: 1.7;
 }
 
 /* FOOTER */

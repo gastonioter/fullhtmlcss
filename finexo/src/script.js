@@ -1,6 +1,7 @@
 // SLIDER
 
 const carouseEl = document.querySelector(".carousel");
+const tabEl = document.querySelector(".tabbed");
 
 const carousel = new Slider(carouseEl);
 carousel.init();
@@ -68,4 +69,38 @@ function Slider(carouselEl) {
   }
 
   return { init };
+}
+
+Tabbed();
+function Tabbed(tabEl) {
+  const tabsContainer = document.querySelector(".tabbed__tabs");
+  const tabContentList = document.querySelectorAll(".tabbed__content");
+
+  init();
+
+  function init() {
+    tabsContainer.addEventListener("click", handleTabClick);
+  }
+
+  function openTabContent(tabId) {
+    tabContentList.forEach((tab) =>
+      tab.dataset.content == tabId
+        ? tab.setAttribute("aria-hidden", false)
+        : tab.setAttribute("aria-hidden", true)
+    );
+
+    Array.from(tabsContainer.children).forEach((tab) => {
+      tab.dataset.contentId == tabId
+        ? tab.classList.add("active")
+        : tab.classList.remove("active");
+    });
+  }
+
+  function handleTabClick(e) {
+    if (!e.target.closest(".tabbed__tab")) return;
+    const clicked = e.target.closest(".tabbed__tab");
+
+    const tabId = clicked.dataset.contentId;
+    openTabContent(tabId);
+  }
 }
