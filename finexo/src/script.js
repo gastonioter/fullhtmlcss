@@ -2,19 +2,20 @@
 
 const carouseEl = document.querySelector(".carousel");
 
-let carousel = Slider(carouseEl);
+const carousel = new Slider(carouseEl);
+carousel.init();
 
 function Slider(carouselEl) {
   const slides = carouselEl.querySelectorAll(".carousel__slide");
 
   const dotsContainer = carouselEl.querySelector(".carousel__dots");
 
-  function goToSlide(index) {
-    // index : 0
+  function goToSlide(slideId) {
+    // slideId : 0
 
     slides.forEach((slide, i) => {
-      slide.style.transform = `translateX(${(i - index) * 150}%)`;
-      if (index == i) slide.style.opacity = 1;
+      slide.style.transform = `translateX(${(i - slideId) * 150}%)`;
+      slideId == i ? (slide.style.opacity = 1) : (slide.style.opacity = 0);
     });
 
     Array.from(dotsContainer.children).forEach((dot) =>
@@ -22,13 +23,11 @@ function Slider(carouselEl) {
     );
     // console.log(dotsContainer.childNodes);
     Array.from(dotsContainer.children)
-      .find((dot) => dot.dataset.goto == index)
+      .find((dot) => dot.dataset.goto == slideId)
       .classList.add("active");
   }
 
   function init() {
-    console.log("init carousel");
-
     function setSlideIndex() {
       slides.forEach((slide, index) => {
         slide.setAttribute("data-slide", index);
@@ -50,19 +49,16 @@ function Slider(carouselEl) {
   }
 
   function createDots() {
-    console.log("create dots");
-
     dotsContainer.innerHTML = createHTMLDots();
 
     function createHTMLDots() {
       return Array.from(slides)
         .map(
-          (slide, index) =>
-            `<li class="carousel__dot" data-goto='${index}'> </li>`
+          (_, index) => `<li class="carousel__dot" data-goto='${index}'> </li>`
         )
         .join("");
     }
   }
 
-  init();
+  return { init };
 }
