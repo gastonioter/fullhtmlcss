@@ -457,10 +457,13 @@ h2 {
 
 .modal[aria-hidden="false"] {
   opacity: 1;
-  transform: translateY(0);
   pointer-events: initial;
-  /* padding-block: 10rem; */
 }
+
+.modal[aria-hidden="false"] .modal__content {
+  transform: translateY(0);
+}
+
 .modal {
   position: fixed;
   pointer-events: none;
@@ -472,8 +475,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-8rem);
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s;
 }
 .modal__content {
   border-radius: 2px;
@@ -483,6 +485,23 @@ h2 {
   max-height: 90%;
   overflow: scroll;
   background-color: #fff;
+
+  transform: translateY(-8rem);
+  transition: transform 0.3s;
+}
+.modal__close {
+  font-size: 3rem;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.modal__close span {
+  color: var(--color-main-darker);
+  font-weight: 600;
+  margin-bottom: 1px;
 }
 
 /* FORM RESET */
@@ -549,6 +568,7 @@ input[type="submit"] {
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s;
+  padding-block: 1.5rem;
 }
 
 input[type="submit"]:hover {
@@ -560,6 +580,11 @@ input[type="submit"]:hover {
   padding: 4rem;
 }
 
+.register__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .register__form {
   display: flex;
 }

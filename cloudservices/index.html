@@ -44,7 +44,7 @@
         </nav>
         <div class="header__sec-nav">
           <a href="" class="button button--outline">Log in</a>
-          <a href="" class="button">Get Started</a>
+          <a class="button register-btn">Get Started</a>
         </div>
       </div>
     </header>
@@ -326,10 +326,13 @@
       </div>
     </footer>
 
-    <div class="modal modal--hidden" aria-hidden="false">
+    <div class="modal modal--hidden" aria-hidden="true">
       <div class="modal__content">
         <div class="register">
-          <h1 class="register__heading">Register</h1>
+          <header class="register__header">
+            <h1 class="register__heading">Register</h1>
+            <div class="modal__close"><span>&times;</span></div>
+          </header>
           <form action="" id="register" class="form register--form">
             <fieldset class="form__fieldset">
               <legend>Personal Information</legend>

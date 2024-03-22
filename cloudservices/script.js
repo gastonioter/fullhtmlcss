@@ -1,13 +1,24 @@
 const footer = document.querySelector(".footer");
 const goupBtn = document.querySelector(".goup");
+const registerForm = document.querySelector("#register");
+
+const registerBtn = document.querySelector(".register-btn");
+
+const modal = document.querySelector(".modal");
+const closeModalBtn = document.querySelector(".modal__close");
+registerForm.addEventListener("submit", handleSubmit);
+closeModalBtn.addEventListener("click", closeModal);
+
+document.addEventListener("click", handleClickOutside, true);
+registerBtn.addEventListener("click", openModal);
 
 goupBtn.addEventListener("click", function scrollToTop() {
   scrollTo(0, 0);
 });
+
 const footerObserver = new IntersectionObserver(
   function goUp(entries) {
     const [entry] = entries;
-    console.log(entry);
     if (entry.isIntersecting) goupBtn.classList.add("goup--visible");
     else goupBtn.classList.remove("goup--visible");
   },
@@ -19,18 +30,24 @@ const footerObserver = new IntersectionObserver(
 
 footerObserver.observe(footer);
 
-document.querySelector("#register").addEventListener("submit", handleSubmit);
 function handleSubmit(e) {
   e.preventDefault();
-  // console.log(e.target.name.value);
-  // const languajes = [];
-  // e.target.languajes.forEach((checkbox) => {
-  //   checkbox.checked ? languajes.push(checkbox.value) : "";
-  // });
+}
 
-  // e.target.submit();
-  // console.log(e.target.live.formAction);
+function openModal(e) {
+  modal.setAttribute("aria-hidden", false);
+  console.log("handle click in open modal (bubbling phase)");
+}
 
-  const formData = new FormData(document.querySelector("#register"));
-  console.log(formData);
+function closeModal(e) {
+  const target = e.target;
+  if (target.closest(".modal__close")) modal.setAttribute("aria-hidden", true);
+  else return;
+}
+
+function handleClickOutside(e) {
+  const target = e.target;
+
+  if (!modal.firstElementChild.contains(target))
+    return modal.setAttribute("aria-hidden", true);
 }
