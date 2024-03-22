@@ -28,8 +28,12 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 }
 
+section {
+  padding-block: 10rem;
+}
 img {
   display: block;
   width: 100%;
@@ -77,7 +81,6 @@ img {
   text-transform: uppercase;
 }
 .hero-area__section {
-  padding-block: 10rem 0;
   color: #ffffff;
 }
 
@@ -123,13 +126,15 @@ img {
   font-size: 1.4rem;
 }
 
-.slide a {
+.slide a,
+.services__all {
   background-color: #00c8ff;
   padding: 1rem 3rem;
   width: fit-content;
   font-weight: 600;
 }
-.slide a:hover {
+.slide a:hover,
+.services__all:hover {
   background-color: #0080a5;
 }
 .slide__imgWp {
@@ -151,10 +156,62 @@ img {
   height: 12px;
   border-radius: 50%;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .carousel__dot.active {
   width: 18px;
   height: 18px;
   background-color: #00c8ff;
+}
+
+/* SERVICES */
+
+.services {
+  text-align: center;
+}
+.services__list {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 8rem;
+}
+.services__title {
+  font-size: 3rem;
+}
+.services__title span {
+  color: #00c8ff;
+}
+.service {
+  border-radius: 1rem;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  background-color: #f8f8f9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.service__desc {
+}
+.service__title {
+}
+.service__heading {
+  width: 100px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.service__learn {
+  font-size: 1.8rem;
+  color: #06004b;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* FOOTER */
+
+.footer__bottom p {
+  padding: 2rem;
+  text-align: center;
 }
