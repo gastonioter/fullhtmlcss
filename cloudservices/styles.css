@@ -448,3 +448,124 @@ h2 {
 .goup__content {
   line-height: 5rem;
 }
+
+/* MODAL */
+
+.modal[aria-hidden="true"] {
+  opacity: 0;
+}
+
+.modal[aria-hidden="false"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: initial;
+  /* padding-block: 10rem; */
+}
+.modal {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-8rem);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.modal__content {
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  min-width: 600px;
+  max-height: 90%;
+  overflow: scroll;
+  background-color: #fff;
+}
+
+/* FORM RESET */
+
+form {
+  font: inherit;
+}
+
+.form__fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+.form__fieldset--subscription {
+  grid-template-columns: none;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+
+form > .form__group {
+  margin-block: 2rem 0rem;
+}
+
+form fieldset + fieldset {
+  margin-top: 3rem;
+}
+legend {
+  border-bottom: 1px solid var(--color-main-darker);
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+input,
+select {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 2px;
+  border: 1px solid var(--color-main-darker);
+  width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline;
+  width: max-content;
+}
+
+input[type="submit"] {
+  background-color: var(--color-main-darker);
+  color: #fff;
+  text-transform: uppercase;
+  /* letter-spacing: -1px; */
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #2b5ced;
+}
+
+/* REGISTER: Modal Content */
+.register {
+  padding: 4rem;
+}
+
+.register__form {
+  display: flex;
+}
+.register__heading {
+  font-size: var(--font-lg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}

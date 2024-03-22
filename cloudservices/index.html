@@ -326,6 +326,136 @@
       </div>
     </footer>
 
+    <div class="modal modal--hidden" aria-hidden="false">
+      <div class="modal__content">
+        <div class="register">
+          <h1 class="register__heading">Register</h1>
+          <form action="" id="register" class="form register--form">
+            <fieldset class="form__fieldset">
+              <legend>Personal Information</legend>
+
+              <div class="form__group">
+                <label for="fullname">full name</label>
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  placeholder="Your Full Name"
+                />
+                <span></span>
+              </div>
+
+              <div class="form__group">
+                <label for="phone">work phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+xxxxxxxx"
+                />
+                <span></span>
+              </div>
+
+              <div class="form__group">
+                <label for="email">email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="birth">birthd date</label>
+                <input
+                  type="date"
+                  name="birthdate"
+                  id="birth"
+                  min="1/01/2020"
+                />
+                <span></span>
+              </div>
+
+              <div class="form__group">
+                <label for="gender">gender</label>
+                <select name="gender" id="gender">
+                  <option value="">Select an option</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="nothing">Prefer not to say</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" />
+                <span></span>
+              </div>
+
+              <div class="form__group">
+                <label for="rpassword">repeat password</label>
+                <input type="password" name="rpassword" id="rpassword" />
+                <span></span>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+              <legend>Company Information</legend>
+              <div class="form__group">
+                <label for="cname">company name</label>
+                <input type="text" placeholder="e.g My Company Inc" />
+              </div>
+              <div class="form__group">
+                <label for="curl">Company Website</label>
+                <input
+                  type="url"
+                  placeholder="e.g https://wwww.mywibsite.com"
+                />
+              </div>
+              <div class="form__group">
+                <label for="employees"
+                  >Number of employees (including you)</label
+                >
+                <input type="number" name="employees" id="employees" />
+              </div>
+              <div class="form__group"></div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--subscription">
+              <legend>Subscription</legend>
+
+              <p for="plan">Wich plan do yo want to subscribe?</p>
+
+              <div class="form__group">
+                <input
+                  type="radio"
+                  name="plan"
+                  id="plan"
+                  value="basic"
+                  checked
+                />
+                <label for="plan">basic</label>
+
+                <input type="radio" name="plan" id="premium" value="premium" />
+                <label for="plan">premium</label>
+
+                <input type="radio" name="plan" id="gold" value="gold" />
+                <label for="plan">gold</label>
+              </div>
+            </fieldset>
+
+            <div class="form__group">
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="terms">Accept terms and conditions?</label>
+            </div>
+
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="goup"><span class="goup__content">&uarr;</span></div>
   </body>
 </html>
