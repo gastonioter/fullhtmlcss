@@ -12,6 +12,8 @@ requiredInputs.forEach((inp) => {
   inp.previousElementSibling.classList.add("label--required");
 });
 
+registerForm.addEventListener("focusout", handleValidationInputs);
+
 registerForm.addEventListener("submit", handleSubmit);
 
 closeModalBtn.addEventListener("click", closeModal);
@@ -43,7 +45,6 @@ function handleSubmit(e) {
 
 function openModal(e) {
   modal.setAttribute("aria-hidden", false);
-  console.log("handle click in open modal (bubbling phase)");
 }
 
 function closeModal(e) {
@@ -57,4 +58,17 @@ function handleClickOutside(e) {
 
   if (!modal.firstElementChild.contains(target))
     return modal.setAttribute("aria-hidden", true);
+}
+
+function handleValidationInputs(e) {
+  const { valid } = e.target.validity;
+  const { validationMessage } = e.target;
+  
+  if (!valid && validationMessage) {
+    console.log("invalid input");
+    e.target.nextElementSibling.textContent = validationMessage;
+  } else {
+    e.target.nextElementSibling.textContent = "";
+  }
+  console.log(valid, validationMessage);
 }

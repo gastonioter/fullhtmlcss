@@ -534,6 +534,10 @@ label.label--required::after {
   display: inline-block;
 }
 
+input + .error-message {
+  color: rgba(238, 48, 48, 0.9);
+}
+
 form > .form__group {
   margin-block: 2rem 0rem;
 }

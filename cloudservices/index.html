@@ -348,7 +348,7 @@
                   placeholder="Your Full Name"
                   required
                 />
-                <span></span>
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
@@ -360,7 +360,7 @@
                   placeholder="+xxxxxxxx"
                   required
                 />
-                <span></span>
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
@@ -372,6 +372,7 @@
                   placeholder="name@example.com"
                   required
                 />
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
@@ -382,23 +383,24 @@
                   id="birth"
                   min="1/01/2020"
                 />
-                <span></span>
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
                 <label for="gender">gender</label>
-                <select name="gender" id="gender" required>
+                <select name="gender" id="gender">
                   <option value="">Select an option</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="nothing">Prefer not to say</option>
                 </select>
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
                 <label for="password">password</label>
                 <input type="password" name="password" id="password" required />
-                <span></span>
+                <span class="error-message"></span>
               </div>
 
               <div class="form__group">
@@ -409,7 +411,7 @@
                   id="rpassword"
                   required
                 />
-                <span></span>
+                <span class="error-message"></span>
               </div>
             </fieldset>
 
@@ -418,19 +420,23 @@
               <div class="form__group">
                 <label for="cname">company name</label>
                 <input type="text" placeholder="e.g My Company Inc" required />
+                <span class="error-message"></span>
               </div>
+
               <div class="form__group">
                 <label for="curl">Company Website</label>
                 <input
                   type="url"
                   placeholder="e.g https://wwww.mywibsite.com"
                 />
+                <span class="error-message"></span>
               </div>
               <div class="form__group">
                 <label for="employees"
                   >Number of employees (including you)</label
                 >
                 <input type="number" name="employees" id="employees" />
+                <span class="error-message"></span>
               </div>
               <div class="form__group"></div>
             </fieldset>
