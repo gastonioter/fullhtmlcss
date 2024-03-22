@@ -45,6 +45,7 @@ function handleSubmit(e) {
 
 function openModal(e) {
   modal.setAttribute("aria-hidden", false);
+  registerForm.querySelector("input").focus();
 }
 
 function closeModal(e) {
@@ -63,7 +64,7 @@ function handleClickOutside(e) {
 function handleValidationInputs(e) {
   const { valid } = e.target.validity;
   const { validationMessage } = e.target;
-  
+
   if (!valid && validationMessage) {
     console.log("invalid input");
     e.target.nextElementSibling.textContent = validationMessage;
