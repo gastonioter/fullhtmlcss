@@ -1,12 +1,19 @@
 const footer = document.querySelector(".footer");
 const goupBtn = document.querySelector(".goup");
 const registerForm = document.querySelector("#register");
-
 const registerBtn = document.querySelector(".register-btn");
-
 const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".modal__close");
+const requiredInputs = document.querySelectorAll(
+  "input[required], select[required]"
+);
+
+requiredInputs.forEach((inp) => {
+  inp.previousElementSibling.classList.add("label--required");
+});
+
 registerForm.addEventListener("submit", handleSubmit);
+
 closeModalBtn.addEventListener("click", closeModal);
 
 document.addEventListener("click", handleClickOutside, true);

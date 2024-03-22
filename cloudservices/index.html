@@ -335,6 +335,7 @@
             <div class="modal__close"><span>&times;</span></div>
           </header>
           <form action="" id="register" class="form register--form">
+            <p class="form__description">(*) these fields are required</p>
             <fieldset class="form__fieldset">
               <legend>Personal Information</legend>
 
@@ -345,6 +346,7 @@
                   name="fullname"
                   id="fullname"
                   placeholder="Your Full Name"
+                  required
                 />
                 <span></span>
               </div>
@@ -356,6 +358,7 @@
                   name="phone"
                   id="phone"
                   placeholder="+xxxxxxxx"
+                  required
                 />
                 <span></span>
               </div>
@@ -367,6 +370,7 @@
                   name="email"
                   id="email"
                   placeholder="name@example.com"
+                  required
                 />
               </div>
 
@@ -383,7 +387,7 @@
 
               <div class="form__group">
                 <label for="gender">gender</label>
-                <select name="gender" id="gender">
+                <select name="gender" id="gender" required>
                   <option value="">Select an option</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -393,13 +397,18 @@
 
               <div class="form__group">
                 <label for="password">password</label>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required />
                 <span></span>
               </div>
 
               <div class="form__group">
                 <label for="rpassword">repeat password</label>
-                <input type="password" name="rpassword" id="rpassword" />
+                <input
+                  type="password"
+                  name="rpassword"
+                  id="rpassword"
+                  required
+                />
                 <span></span>
               </div>
             </fieldset>
@@ -408,7 +417,7 @@
               <legend>Company Information</legend>
               <div class="form__group">
                 <label for="cname">company name</label>
-                <input type="text" placeholder="e.g My Company Inc" />
+                <input type="text" placeholder="e.g My Company Inc" required />
               </div>
               <div class="form__group">
                 <label for="curl">Company Website</label>
@@ -442,10 +451,10 @@
                 <label for="plan">basic</label>
 
                 <input type="radio" name="plan" id="premium" value="premium" />
-                <label for="plan">premium</label>
+                <label for="premium">premium</label>
 
                 <input type="radio" name="plan" id="gold" value="gold" />
-                <label for="plan">gold</label>
+                <label for="gold">gold</label>
               </div>
             </fieldset>
 

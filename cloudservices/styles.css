@@ -481,7 +481,7 @@ h2 {
   border-radius: 2px;
   position: relative;
   display: block;
-  min-width: 600px;
+
   max-height: 90%;
   overflow: scroll;
   background-color: #fff;
@@ -509,7 +509,10 @@ h2 {
 form {
   font: inherit;
 }
-
+.form__description {
+  opacity: 0.8;
+  font-size: 1.4rem;
+}
 .form__fieldset {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -524,6 +527,11 @@ label {
   display: block;
   text-transform: capitalize;
   font-size: 1.4rem;
+}
+
+label.label--required::after {
+  content: "*";
+  display: inline-block;
 }
 
 form > .form__group {
@@ -544,9 +552,9 @@ legend {
 input,
 select {
   padding-inline: 1rem;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   border-radius: 2px;
-  border: 1px solid var(--color-main-darker);
+  border: 1px solid rgb(182, 182, 234);
   width: 100%;
 }
 
@@ -577,7 +585,7 @@ input[type="submit"]:hover {
 
 /* REGISTER: Modal Content */
 .register {
-  padding: 4rem;
+  padding: 2rem 4rem;
 }
 
 .register__header {
