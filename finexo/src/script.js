@@ -7,10 +7,12 @@ carousel.init();
 
 function Slider(carouselEl) {
   const slides = carouselEl.querySelectorAll(".carousel__slide");
-
+  let currSlideId = 0;
+  const lastSlide = slides.length;
   const dotsContainer = carouselEl.querySelector(".carousel__dots");
 
   function goToSlide(slideId) {
+    currSlideId = slideId;
     // slideId : 0
 
     slides.forEach((slide, i) => {
@@ -46,6 +48,11 @@ function Slider(carouselEl) {
     createDots();
 
     goToSlide(0);
+
+    setInterval(function goNext() {
+      if (currSlideId == lastSlide - 1) return goToSlide(0);
+      goToSlide(currSlideId + 1);
+    }, 2000);
   }
 
   function createDots() {
