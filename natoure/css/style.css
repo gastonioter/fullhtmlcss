@@ -1,175 +1,87 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-/* COLORS */
-
-:root {
-  --emerald: #55c57aff;
-  --oxford-blue: #0b132bff;
-  --green-blue: #1768acff;
-  --cal-poly-green: #1b512dff;
-  --ebony: #566246ff;
-
-  --emerald: hsla(140, 49%, 55%, 1);
-  --oxford-blue: hsla(225, 59%, 11%, 1);
-  --green-blue: hsla(207, 76%, 38%, 1);
-  --cal-poly-green: hsla(140, 50%, 21%, 1);
-  --ebony: hsla(86, 17%, 33%, 1);
-
-  /* color variations */
-
-  --mint: #58b087ff;
-  --rich-black: #0b1926ff;
-  --cerulean: #197a9fff;
-  --brunswick-green: #1c4733ff;
-  --ebony: #565a4bff;
-}
-
 /* RESET */
-
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
+
 body {
-  font-family: "Lato", sans-serif;
-  /* font-size: 1.6rem; */
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-}
+  padding: 3rem; }
 
-/* HEADER */
-
-.header {
-  height: 95dvh;
-  background-image: linear-gradient(
-      to right,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 131, 0.8)
-    ),
-    url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75dvh, 0 100%);
-  position: relative;
-}
-
-.header__logo-bx {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-bx {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.heading-primary {
-  margin-bottom: 6rem;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.heading-primary--main {
-  font-size: 6rem;
-  display: block;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-
-  /*   
-  animation-delay: 3s;
-  animation-iteration-count: 3; */
-}
-.heading-primary--sub {
-  font-size: 2rem;
-  display: block;
-
-  letter-spacing: 1.74rem;
-  animation: moveInRight 1s ease-in-out;
-}
+@keyframes moveInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(3rem); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
-
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(1rem);
-  }
-
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10%);
-  }
+    transform: translateX(10%); }
   80% {
-    transform: translateX(-1rem);
-  }
-
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
-.btn:link,
-.btn:visited {
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  color: #fff; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-in-out; }
+
+/* COLORS */
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   transition: transform 0.1s ease-in-out;
-  border-radius: 5rem;
-}
+  border-radius: 5rem; }
+
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.4);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.btn--white {
-  background-color: #fff;
-  color: var(--oxford-blue);
-  position: relative;
-}
-
-.btn--animated {
-  animation: moveInBottom 1s ease-in-out 0.75s;
-  animation-fill-mode: backwards;
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
   content: "";
@@ -182,21 +94,69 @@ body {
   left: 0;
   background-color: #fff;
   z-index: -1;
-  transition: transform 0.4s, opacity 0.4s;
-}
+  transition: transform 0.4s, opacity 0.4s; }
 
-.btn:hover::after {
-  transform: scale(1.4);
-  opacity: 0;
-}
+.btn--white {
+  background-color: #fff;
+  color: var(--oxford-blue);
+  position: relative; }
+  .btn--white::after {
+    background-color: #fff; }
 
-@keyframes moveInBottom {
-  from {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.btn--animated {
+  animation: moveInBottom 1s ease-in-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.header {
+  height: 80dvh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75dvh, 0 100%);
+  position: relative; }
+  .header__logo-bx {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-bx {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 6rem; }
+  .row [class^="col-"] {
+    background-color: #f1f1f1;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2);
+    background-color: orange; }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 3rem) / 3);
+    background-color: red; }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 3rem) / 4);
+    background-color: blue; }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 3rem) / 3) + 3rem);
+    background-color: blue; }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 3rem) / 4) + 3rem);
+    background-color: blue; }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 3rem) / 4) + 2 *3rem);
+    background-color: blue; }
