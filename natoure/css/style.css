@@ -227,11 +227,11 @@ body {
   .row .col-1-of-4 {
     width: calc((100% - 3 * 3rem) / 4); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+    width: calc( 2 * ((100% - 2 * 3rem) / 3) + 3rem); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+    width: calc( 2 * ((100% - 3 * 3rem) / 4) + 3rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 3rem) / 4) + 2 *3rem); }
+    width: calc( 3 * ((100% - 3 * 3rem) / 4) + 2 *3rem); }
 
 .section-about {
   background-color: #f7f7f7;
