@@ -29,3 +29,33 @@
   margin-top: -11rem;
   text-align: center;
 }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(#000, 0.2);
+  background-size: cover;
+  height: 50rem;
+  background-position: center right;
+  margin: 0 auto;
+
+  &__form {
+    padding: 5rem;
+    width: 50%;
+  }
+}
